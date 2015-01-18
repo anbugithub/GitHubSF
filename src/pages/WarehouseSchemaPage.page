@@ -1,0 +1,23 @@
+<apex:page controller="WarehouseSchemaController"  >
+    <apex:form >
+    <apex:outputPanel id="warehouseForm">
+        
+        <apex:pageBlock >
+        Warehouse Schema installed.
+        </apex:pageBlock>
+        
+        <apex:pageBlock rendered="{!noData}">
+            <h2>No Warehouse data in the system,&nbsp;<apex:commandLink value="Click here" action="{!createData}" reRender="warehouseForm" /> to insert some test data.</h2>
+        </apex:pageBlock>
+        
+        <apex:pageBlock rendered="{!NOT(noData)}">
+            <h2>Data detected, redirecting to Merchandise tab...</h2> 
+            <script>
+                 window.location.href = '{!redirectString}';
+            </script>
+        </apex:pageBlock>
+        
+    </apex:outputPanel>
+    </apex:form>
+     
+</apex:page>

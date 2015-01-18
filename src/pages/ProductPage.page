@@ -1,0 +1,22 @@
+<apex:page controller="ProductPageController">
+
+    <h1>Submit New Product Priority values</h1>
+    
+    <apex:form >
+        <apex:pageMessages />
+        <table>
+            <tr>
+                <th>Auto:</th>
+                <td><apex:inputText value="{!c.Auto__c}"/></td>
+            </tr>
+            <tr>
+                <th>Bicycle:</th>
+                <td><apex:inputText value="{!c.Bicycle__c}"/></td>
+            </tr>
+            <tr>
+                <td><apex:commandButton value="Submit Product" action="{!submitProduct}"/></td>
+            </tr>
+        </table>
+    </apex:form>
+
+</apex:page>
